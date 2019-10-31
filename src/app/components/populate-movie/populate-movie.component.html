@@ -1,0 +1,10 @@
+<div class="card col-sm-4">
+  <img
+    [src]="movie | missingPeople"
+    class="card-img-top img-rounded bg-dark"
+    [alt]="movie.name"
+  />
+  <div class="image-caption centered">
+    {{ movie.name }}
+  </div>
+</div>

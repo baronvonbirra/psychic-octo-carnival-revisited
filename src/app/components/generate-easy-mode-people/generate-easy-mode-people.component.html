@@ -1,0 +1,10 @@
+<div class="card col-sm-4">
+  <img
+    [src]="randomPeople | missingPeople"
+    class="card-img-top img-rounded bg-dark"
+    [alt]="randomPeople.name"
+  />
+  <div class="image-caption centered">
+    {{ randomPeople.name }}
+  </div>
+</div>

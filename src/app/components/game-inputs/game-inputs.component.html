@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Search</span
+      >
+    </div>
+    <input
+      [(ngModel)]="search"
+      name="search"
+      type="text"
+      placeholder="Search a movie..."
+      class="form-control"
+      (keyup.enter)="searchMovie()"
+    />
+  </div>
+  <div
+    *ngIf="movies.length > 0"
+    class="col-md-9 top10 animated fadeIn form-group"
+  >
+    <div class="row">
+      <div *ngFor="let movie of movies" class="col-sm text-center">
+        <button (click)="onFormSubmit(movie.id)">
+          <img [src]="movie | missingPeople" class="img-thumbnail" />
+          <div class="image-caption centered card-body">
+            {{ movie.original_title }}
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
